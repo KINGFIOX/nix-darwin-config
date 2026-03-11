@@ -10,7 +10,7 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
   {
     darwinConfigurations."wangfioxs-MacBook-Pro" = nix-darwin.lib.darwinSystem {
-      modules = [ ./configuration.nix ];
+      modules = [ ./configuration.nix ./darwin.nix ];
       specialArgs = { inherit self; };
     };
   };
