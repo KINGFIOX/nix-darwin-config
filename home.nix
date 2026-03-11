@@ -20,15 +20,17 @@
   };
   programs.direnv = {
     enable = true;
-    enableBashIntegration = true;
+    enableZshIntegration = true;
     nix-direnv.enable = true;
   };
   programs.starship = {
     enable = true;
   };
-  programs.bash = {
+  programs.zsh = {
     enable = true;
     enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
   };
   programs.man.enable = true;
 
