@@ -1,21 +1,36 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager 配置 - 管理用户级应用程序和 dotfiles
-
   home.username = "wangfiox";
   home.homeDirectory = "/Users/wangfiox";
 
-  home.stateVersion = "24.11";
-
-  # 用户级安装的应用程序
-  home.packages = [
-    # 在此添加要通过 home-manager 管理的应用，例如：
-    # pkgs.htop
-    # pkgs.ripgrep
-    # pkgs.fzf
+  home.packages = with pkgs; [
+    htop
+    ripgrep
+    fzf
+    tmux
   ];
 
-  # 启用 man 手册
+  programs.git = {
+    enable = true;
+    settings.user = {
+      name = "wangfiox";
+      email = "wangfiox@gmail.com";
+    };
+  };
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
+  };
+  programs.starship = {
+    enable = true;
+  };
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
+  };
   programs.man.enable = true;
+
+  home.stateVersion = "25.11";
 }
