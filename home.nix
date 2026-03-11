@@ -31,6 +31,9 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    shellAliases = {
+      ll = "ls -alh";
+    };
   };
   programs.man.enable = true;
 
