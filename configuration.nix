@@ -1,6 +1,9 @@
 { config, pkgs, self, ... }:
 
 {
+  # 定义用户 home 目录，home-manager 依赖此配置
+  users.users.wangfiox.home = "/Users/wangfiox";
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = [

@@ -1,14 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "wangfiox";
-  home.homeDirectory = "/Users/wangfiox";
+  home.stateVersion = "25.11";
 
   home.packages = with pkgs; [
     htop
     ripgrep
     fzf
     tmux
+    lazygit
   ];
 
   programs.git = {
@@ -32,5 +32,4 @@
   };
   programs.man.enable = true;
 
-  home.stateVersion = "25.11";
 }

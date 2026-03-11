@@ -19,7 +19,10 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.wangfiox = import ./home.nix;
+          home-manager.users.wangfiox = {
+            imports = [ ./home.nix ];
+            home.homeDirectory = "/Users/wangfiox";
+          };
         }
       ];
       specialArgs = { inherit self; };
