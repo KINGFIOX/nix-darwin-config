@@ -9,6 +9,13 @@
     fzf
     tmux
     lazygit
+    ranger
+    nixfmt
+    nil
+    cloc
+    aria2
+    pandoc
+    uv
   ];
 
   programs.git = {

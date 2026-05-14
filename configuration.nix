@@ -6,9 +6,12 @@
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = [
-    pkgs.vim
+  environment.systemPackages = with pkgs; [
+    vim
+    nixd
   ];
+
+  nixpkgs.config.allowUnfree = true;
 
   # 使用 Determinate Nix Installer 时需禁用 nix-darwin 的 Nix 管理
   nix.enable = false;
