@@ -17,6 +17,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     vim
+    vscode
   ];
 
   nixpkgs.config.allowUnfree = true;
