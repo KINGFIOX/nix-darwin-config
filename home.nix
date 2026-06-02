@@ -20,6 +20,10 @@
     wget
   ];
 
+  home.sessionPath = [
+    "/Applications/Codex.app/Contents/Resources"
+  ];
+
   programs.fish = {
     enable = true;
     # Use Oh My Fish from Nix store, no imperative installer needed.
