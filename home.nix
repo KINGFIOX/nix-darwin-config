@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.11";
 
   home.packages = with pkgs; [
     htop
@@ -18,10 +18,8 @@
     uv
     nixd
     wget
-  ];
-
-  home.sessionPath = [
-    "/Applications/Codex.app/Contents/Resources"
+    codex
+    gh
   ];
 
   programs.fish = {
@@ -40,6 +38,7 @@
       email = "wangfiox@gmail.com";
     };
   };
+
   programs.man.enable = true;
 
 }
